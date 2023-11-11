@@ -48,6 +48,4 @@ optimizer = ECCO_DNN(net.parameters(), eta = args.eta, alpha_0=args.alpha_0, lim
 ```
 
 
-## Citing ECCO-DNN
-
 [1] George Hebrail and Alice Berard. Individual household electric power consumption data set. Aug 2012
