@@ -14,10 +14,9 @@ import argparse
 import sys
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.append(project_dir)
-from kapperkermit.models import *
-from kapperkermit.ecco_dnn import ECCO_DNN
-from kapperkermit.utils import progress_bar
-from kapperkermit.utils import write_to_csv
+from ecco_dnn.models import *
+from ecco_dnn.utils import progress_bar
+from ecco_dnn.utils import write_to_csv
 
 import matplotlib.pyplot as plt
 import datetime
