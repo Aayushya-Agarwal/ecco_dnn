@@ -33,23 +33,9 @@ For example:
 optimizer = ECCO_DNN(net.parameters(), eta = args.eta, alpha_0=args.alpha_0)
 ```
 
-If the user can explicitly define the layers that are part of the activation limiting (refer to [XX]), then the index of layers that are limited , and the type of activation layer (e.g., batch-norm) should be passed as a list to the optimizer. For example, the layers for the 'resnet18_update' model is provided as:
-
-```
-limiting_layer_idx = [1, 4, 10, 16, 25, 31, 40, 46, 55]
-optimizer = ECCO_DNN(net.parameters(), eta = args.eta, alpha_0=args.alpha_0, limiting_layer_idx=limiting_layer_idx, num_layers = 62, layer_type="bn")
-```
-
-
-The ECCO-DNN optimizer can then be called by:
-```
-limiting_layer_idx = [1, 4, 10, 16, 25, 31, 40, 46, 55]
-optimizer = ECCO_DNN(net.parameters(), eta = args.eta, alpha_0=args.alpha_0, limiting_layer_idx=limiting_layer_idx, num_layers = 62, layer_type="bn")
-```
-
 <details>
     <summary>Enabling Activation Limiting</summary>
-
+If the user can explicitly define the layers that are part of the activation limiting, then the index of layers that are limited can passed as a list to the optimizer. 
 To utilize activation-specific limiting, ecco_dnn requires the following parameteres to explicitly define the layers that are part of the activation limiting step:
 
     1. The function type before the activation layer: batch-norm("bn") or linear("linear")
