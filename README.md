@@ -65,7 +65,7 @@ In our examples (examples/train_cifar10.py), we apply the activation-limiting st
 During the forward propogation of this model, the input values for each layer in `limiting_layer_idx` are recorded in `model.relu_input_list`. 
 
 
-![Activation Limiting for Resnet18 layers][limiting.png]
+![Activation Limiting for Resnet18 layers](https://github.com/Aayushya-Agarwal/ecco_dnn/blob/main/limiting.png)
 
 
 The following code enables the activation limiting in ecco_dnn:
